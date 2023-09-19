@@ -12,4 +12,4 @@
 ## End Game:
 <p align="center"><img src="https://raw.githubusercontent.com/Abdo-Nsila/Ping-Pong-Game/master/Assets/end_game.png"/></p>
 
-Created by [`ilorez`](https://github.com/ilorez)
+### Created by [`ilorez`](https://github.com/ilorez)
