@@ -1,0 +1,11 @@
+{
+  "LIGHT": true,
+  "WINDOW_SIZE": [1200, 650],
+  "show_game_info": true,
+  "FPS": 60,
+  "DEGRE_COLOR": [70, 255],
+  "BG_COLOR": [20, 20, 20],
+  "COLOR": [255, 255, 255],
+  "ROUNDS": 5,
+  "MAX_ANG": 10000
+}

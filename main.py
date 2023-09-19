@@ -1,22 +1,26 @@
 import pygame
 import random
 from pygame import mixer  # for sounds
+import json
 
 #================== settings ==================#
-LIGHT = True #mode if light = false it's will be dark
-WINDOW_SIZE = (1200, 650) #windows size
-show_game_info = True #show controller when open programme
-game_info_posisiton = ((WINDOW_SIZE[0]-800)/2,(WINDOW_SIZE[1]-720)/2) #get center
-FPS = 60 #FPS OF GAME 
-DEGRE_COLOR = (70,255) #degre that random color work on
-BG_COLOR = (20,20,20) # background
-COLOR = (255,255,255) # text color
-ROUNDS = 5  # game rounds
-MAX_SPEED = WINDOW_SIZE[1] / FPS
-MAX_ANG = 10000
+with open('settings.json') as data:
+  settings = json.load(data)
 
-bar = {"w": WINDOW_SIZE[0] * (0.09), "h": 100000000, 'wallSp':  5, 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}  # bar object or dict have default value of bars
-main_features = {'color': (50, 50, 50), 'position': (50, 50)}   # game place featuresl
+LIGHT = settings["LIGHT"]                                                                   # mode if light = false it's will be dark
+WINDOW_SIZE = settings["WINDOW_SIZE"]                                                       # windows size
+show_game_info = settings["show_game_info"]                                                 # show controller when open programme
+game_info_posisiton = ((WINDOW_SIZE[0]-800)/2,(WINDOW_SIZE[1]-720)/2)                       # get center
+FPS = settings["FPS"]                                                                       # FPS OF GAME 
+DEGRE_COLOR = settings["DEGRE_COLOR"]                                                       # degre that random color work on
+BG_COLOR = settings["BG_COLOR"]                                                             # background
+COLOR = settings["COLOR"]                                                                   # text color
+ROUNDS = settings["ROUNDS"]                                                                 # game rounds
+MAX_SPEED = WINDOW_SIZE[1] / FPS
+MAX_ANG = settings["MAX_ANG"]
+
+bar = {"w": WINDOW_SIZE[0] * (0.09), "h": 100000000, 'wallSp':  5, 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}                          # bar object or dict have default value of bars
+main_features = {'color': (50, 50, 50), 'position': (50, 50)}                                                                                                             # game place featuresl
 ball_feat = {'w': 8, 'h': 8, "defaultSpeed": 1,"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
 
 #set some paramatert
