@@ -19,7 +19,7 @@ ROUNDS = settings["ROUNDS"]                                                     
 MAX_SPEED = WINDOW_SIZE[1] / FPS
 MAX_ANG = settings["MAX_ANG"]
 
-bar = {"w": WINDOW_SIZE[0] * (0.09), "h": 100000000, 'wallSp':  5, 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}                          # bar object or dict have default value of bars
+bar = {"w": WINDOW_SIZE[0] * (settings["BAR_WIDTH"]), "h": 100000000, 'wallSpace':  settings["BAR_HIEGHT"], 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}                          # bar object or dict have default value of bars
 main_features = {'color': (50, 50, 50), 'position': (50, 50)}                                                                                                             # game place featuresl
 ball_feat = {'w': settings["BALL_SIZE"][0], 'h': settings["BALL_SIZE"][1], "defaultSpeed": settings["DEFAULT_SPEED"],"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
 
@@ -68,8 +68,8 @@ main.fill(main_features['color'])
 # bar_max_R = main_SIZE[0]-bar['w']-5
 
 # create bar obj with default features
-bar_1 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, bar['wallSp'] -  bar['h'] , bar['w'], bar['h'])
-bar_2 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, main_SIZE[1] - bar['wallSp'], bar['w'], bar['h'])
+bar_1 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, bar['wallSpace'] -  bar['h'] , bar['w'], bar['h'])
+bar_2 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, main_SIZE[1] - bar['wallSpace'], bar['w'], bar['h'])
 bar1_score = bar2_score = 0
 
 # this will make sense of ball angle when move right and left
@@ -133,8 +133,8 @@ def on_goal() -> None:
 
     mixer.Sound('./sounds/goal.wav').play()
     # bar['w'] *= 2
-    bar_1 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, bar['wallSp'] - bar['h'], bar['w'], bar['h'])
-    bar_2 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, main_SIZE[1] - bar['wallSp'], bar['w'], bar['h'])
+    bar_1 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, bar['wallSpace'] - bar['h'], bar['w'], bar['h'])
+    bar_2 = pygame.Rect(main_SIZE[0] // 2 - bar['w'] // 2, main_SIZE[1] - bar['wallSpace'], bar['w'], bar['h'])
     ball_feat['ang'] = ball_feat['dir_s'] = 0
     ball.x = ball_x
     ball.y = ball_y
