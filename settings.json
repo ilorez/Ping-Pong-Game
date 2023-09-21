@@ -1,5 +1,5 @@
 {
-  "LIGHT": true,
+  "THEME": ["dark", ["dark", "light"]],
   "WINDOW_SIZE": [1200, 650],
   "show_game_info": true,
   "FPS": 60,
@@ -8,5 +8,6 @@
   "COLOR": [255, 255, 255],
   "ROUNDS": 5,
   "MAX_ANG": 10000,
-  "DEFAULT_SPEED": 3.5
+  "DEFAULT_SPEED": 3.5,
+  "BALL_SIZE": [8, 8]
 }

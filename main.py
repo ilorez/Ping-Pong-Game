@@ -7,7 +7,7 @@ import json
 with open('settings.json') as data:
   settings = json.load(data)
 
-LIGHT = settings["LIGHT"]                                                                   # mode if light = false it's will be dark
+THEME = settings["THEME"]                                                                   # theme => the default is dark
 WINDOW_SIZE = settings["WINDOW_SIZE"]                                                       # windows size
 show_game_info = settings["show_game_info"]                                                 # show controller when open programme
 game_info_posisiton = ((WINDOW_SIZE[0]-800)/2,(WINDOW_SIZE[1]-720)/2)                       # get center
@@ -21,10 +21,10 @@ MAX_ANG = settings["MAX_ANG"]
 
 bar = {"w": WINDOW_SIZE[0] * (0.09), "h": 100000000, 'wallSp':  5, 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}                          # bar object or dict have default value of bars
 main_features = {'color': (50, 50, 50), 'position': (50, 50)}                                                                                                             # game place featuresl
-ball_feat = {'w': 8, 'h': 8, "defaultSpeed": settings["DEFAULT_SPEED"],"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
+ball_feat = {'w': settings["BALL_SIZE"][0], 'h': settings["BALL_SIZE"][1], "defaultSpeed": settings["DEFAULT_SPEED"],"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
 
 #set some paramatert
-if LIGHT: 
+if THEME == "light": 
     main_features['color'] = (220,220,220)
     BG_COLOR = (255,255,255)
     COLOR = (0,0,0)
