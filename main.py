@@ -21,7 +21,7 @@ MAX_ANG = settings["MAX_ANG"]
 
 bar = {"w": WINDOW_SIZE[0] * (0.09), "h": 100000000, 'wallSp':  5, 'speed': 720 / FPS, 'color': (210, 210, 210), 'multiAng': WINDOW_SIZE[0]/100}                          # bar object or dict have default value of bars
 main_features = {'color': (50, 50, 50), 'position': (50, 50)}                                                                                                             # game place featuresl
-ball_feat = {'w': 8, 'h': 8, "defaultSpeed": 1,"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
+ball_feat = {'w': 8, 'h': 8, "defaultSpeed": settings["DEFAULT_SPEED"],"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
 
 #set some paramatert
 if LIGHT: 

@@ -7,5 +7,6 @@
   "BG_COLOR": [20, 20, 20],
   "COLOR": [255, 255, 255],
   "ROUNDS": 5,
-  "MAX_ANG": 10000
+  "MAX_ANG": 10000,
+  "DEFAULT_SPEED": 3.5
 }
