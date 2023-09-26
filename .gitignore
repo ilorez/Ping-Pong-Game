@@ -1,0 +1,72 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore environment-specific files
+.env
+
+# Ignore system-specific Python interpreters
+*.python-version
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*.pyc
+*.pyo
+*.pyd
+*.bak
+*.bak2
+*.tmp
+*.tmp.*
+*.log
+*.cache
+*.diff
+*.patch
+*.rej
+*.swp
+*.~c
+*.DS_Store
+desktop.ini
+Thumbs.db
+ehthumbs.db
+Icon?
+Icon
+*.db
+*.DS_Store?
+
+# Ignore Jupyter Notebook files
+.ipynb_checkpoints/
+
+# Ignore virtual environment
+venv/
+
+# Ignore built distributions and egg directories
+*.egg
+*.egg-info/
+dist/
+build/
+*.installer/
+*.egg-info
+*.dist-info
+*.egg-info/
+
+# Ignore pipenv virtual environment
+Pipfile.lock
+
+# Ignore PyCharm files
+*.iml
+.idea/
+*.pyc
+
+# Ignore pytest cache and coverage
+.pytest_cache/
+.coverage
+
+# Ignore pycache
+__pycache__/
