@@ -1,11 +1,11 @@
 import pygame
 import random
 from pygame import mixer  # for sounds
-import json
+from controle import getSettings
 
 #================== settings ==================#
-with open('settings.json') as data:
-  settings = json.load(data)
+
+settings = getSettings()
 
 THEME = settings["THEME"]                                                                   # theme => the default is dark
 WINDOW_SIZE = settings["WINDOW_SIZE"]                                                       # windows size
@@ -24,7 +24,7 @@ main_features = {'color': (50, 50, 50), 'position': (50, 50)}                   
 ball_feat = {'w': settings["BALL_SIZE"][0], 'h': settings["BALL_SIZE"][1], "defaultSpeed": settings["DEFAULT_SPEED"],"defaultAng": ((WINDOW_SIZE[1] / FPS) / 4), 'addAng': 3/FPS, 'addSpeed':(FPS+10)/FPS, 'move': False,'dir_s': 0, 'ang': 0}  # ball features 
 
 #set some paramatert
-if THEME == "light": 
+if THEME[0] == "light": 
     main_features['color'] = (220,220,220)
     BG_COLOR = (255,255,255)
     COLOR = (0,0,0)
