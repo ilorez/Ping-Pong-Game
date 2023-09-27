@@ -1,15 +1,39 @@
 {
-  "THEME": ["dark", ["dark", "light"]],
-  "WINDOW_SIZE": [1200, 650],
+  "THEME": [
+    "dark",
+    [
+      "dark",
+      "light"
+    ]
+  ],
+  "WINDOW_SIZE": [
+    1200,
+    650
+  ],
   "show_game_info": true,
   "FPS": 60,
-  "DEGRE_COLOR": [70, 255],
-  "BG_COLOR": [20, 20, 20],
-  "COLOR": [255, 255, 255],
+  "DEGRE_COLOR": [
+    70,
+    255
+  ],
+  "BG_COLOR": [
+    20,
+    20,
+    20
+  ],
+  "COLOR": [
+    255,
+    255,
+    255
+  ],
   "ROUNDS": 5,
   "MAX_ANG": 10000,
   "DEFAULT_SPEED": 3.5,
-  "BALL_SIZE": [8, 8],
+  "BALL_SIZE": [
+    8,
+    8
+  ],
   "BAR_WIDTH": 0.09,
-  "BAR_HIEGHT": 5
+  "BAR_HIEGHT": 5,
+  "VOLUME": 0.1
 }

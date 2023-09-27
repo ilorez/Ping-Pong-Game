@@ -11,5 +11,6 @@
   "DEFAULT_SPEED": 3.5,
   "BALL_SIZE": [8, 8],
   "BAR_WIDTH": 0.09,
-  "BAR_HIEGHT": 5
+  "BAR_HIEGHT": 5,
+  "VOLUME": 0.1
 }

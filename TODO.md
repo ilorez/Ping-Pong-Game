@@ -1,4 +1,4 @@
-- add volume to settings
+- add volume to settings --- Done
 - add theme full controlle not just dark and light (make systme that you can add to it any theme later)
 - complete game controle functions
 - add game controlle to game

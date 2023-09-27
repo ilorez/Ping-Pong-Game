@@ -51,7 +51,8 @@ window.fill(BG_COLOR)
 # background music
 pygame.mixer.music.load("./sounds/bg.mp3")
 # Set the volume of the background music
-pygame.mixer.music.set_volume(0.1)
+volume = settings["VOLUME"]
+pygame.mixer.music.set_volume(volume)
 # Start playing the background music
 pygame.mixer.music.play(-1)  # -1: playing bg music on a loop
 # create canvas main for make play on it
